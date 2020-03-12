@@ -27,7 +27,8 @@ int main() {
 
 		// Integration
 		cout << "Integration: " << Integrator.InterpolarQuadratur(function, a, x) << endl;
-		cout << "Integration Built In: " << myFunction.IntegrateSumTrapez(a, x) << endl;
+		cout << "Simpson Built In: " << myFunction.IntegrateSimpson(a, x) << endl;
+		cout << "Trapez Built In: " << myFunction.IntegrateSumTrapez(a, x) << endl;
 
 
 		////Extrapolation

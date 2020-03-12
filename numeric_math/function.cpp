@@ -32,3 +32,21 @@ double function::IntegrateSumTrapez(double lowerBnd, double upperBnd)
 	return sum;
 }
 
+double function::IntegrateSimpson(double lowerBnd, double upperBnd)
+{
+	double h = this->dt / 2;
+	double size = (upperBnd - lowerBnd) / h ;
+	
+	double* pts = new double[size + 1];
+	pts[0] = lowerBnd;
+
+	double sum = 0;
+	for (int i = 0; i <= (size - 2) / 2; i++) {
+		pts[2 * i + 1] = pts[2 * i] + h;
+		pts[2 * i + 2] = pts[2 * i] + h * 2;
+		sum += this->out(pts[2*i]) + 4* this->out(pts[2 * i + 1]) + this->out(pts[2 * i + 2]);
+	}
+	delete[] pts;
+	return sum*h/3;
+}
+

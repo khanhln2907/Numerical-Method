@@ -16,6 +16,7 @@ public:
 
 	// Integration
 	double IntegrateSumTrapez(double lowerBnd, double upperBnd);
+	double IntegrateSimpson(double lowerBnd, double upperBnd);
 
 };
 
