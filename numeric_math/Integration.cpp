@@ -43,6 +43,6 @@ template double Integration::InterpolarQuadratur(Interpolation,double, double);
 
 
 // Trapez Rules
-double Integration::trapez(Interpolation function, double lowerBnd, double upperBnd) {
+double Integration::SumTrapez(Interpolation function, double lowerBnd, double upperBnd) {
 	return lowerBnd;
 }

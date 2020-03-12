@@ -124,12 +124,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Derivative.cpp" />
+    <ClCompile Include="function.cpp" />
     <ClCompile Include="Integration.cpp" />
     <ClCompile Include="Interpolation.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Derivative.h" />
+    <ClInclude Include="function.h" />
     <ClInclude Include="Integration.h" />
     <ClInclude Include="Interpolation.h" />
     <ClInclude Include="main.h" />

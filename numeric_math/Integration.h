@@ -1,13 +1,13 @@
 #pragma once
 #include"main.h"
+#include"Interpolation.h"
 
-//#include"Integration.cpp"
 extern class Interpolation;
 
 class Integration
 {
 private:
-	double dx = 0.01;
+	double dx = 0.001;
 
 public:
 	Integration();
@@ -25,7 +25,7 @@ public:
 	template <typename T> T InterpolarQuadratur(Interpolation function, T lowerBnd, T upperBnd);
 	
 	// Trapez Quadratur =========================================================================
-	double trapez(Interpolation function, double lowerBnd, double upperBnd); // Consider Pointer to function here
+	double SumTrapez(Interpolation function, double lowerBnd, double upperBnd); // Consider Pointer to function here
 	
 };
 

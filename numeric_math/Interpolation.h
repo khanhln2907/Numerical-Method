@@ -1,12 +1,8 @@
 #pragma once
 #include"main.h"
 
-struct p2D {
-	double x;
-	double y;
-};
-
-typedef std::vector<p2D> vector2D;
+extern struct p2D;
+extern vector2D;
 
 class Interpolation
 {

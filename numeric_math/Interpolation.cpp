@@ -30,7 +30,6 @@ Interpolation::~Interpolation()
 // Numeric
 // Lagrange
 double Interpolation::lagrange(double x) {
-	// Interpolationspolynom Lm of Lagrange: Lkn(xk) = 1, Lkn(xi) = 0 for i != k
 	double sum = 0;
 
 	for (int k = 0; k < this->size; k++) {
@@ -67,6 +66,7 @@ double Interpolation::newton(double x) {
 }
 
 // Define Template and remember to attach explicit declaration
+// Lagrange
 template<typename T> T Interpolation::lagrangeFromPoints(T x, const std::vector<T> vx, const std::vector<T> vy) {
 	assert(vx.size() == vy.size());
 	// Interpolationspolynom Lm of Lagrange: Lkn(xk) = 1, Lkn(xi) = 0 for i != k
