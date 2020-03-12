@@ -16,19 +16,19 @@ double function::out(double in)
 	return this->funcPtr(in);
 }
 
-double function::integralInterpolarQuadratur(double lowerBnd, double upperBnd)
+double function::IntegrateSumTrapez(double lowerBnd, double upperBnd)
 {
-	// Calculate operating point
-	double interval = upperBnd - lowerBnd;
-	double size = interval / this->dt;
-	double* operatingPts = new double[size + 1];
-	operatingPts[0] = lowerBnd;
-	double sum = this->out(operatingPts[0]) * dt;
+	double size = (upperBnd - lowerBnd) / this->dt;
+	double* pts = new double[size+1];
+	pts[0] = lowerBnd; 
+	double sum = this->out(pts[0]) * this->dt/2;
 	for (int i = 1; i <= size; i++) {
-		operatingPts[i] = operatingPts[i - 1] + this->dt;
-		sum += this->out(operatingPts[i]) * dt;
+		pts[i] = pts[i - 1] + this->dt;
+		if(i != size) sum += this->out(pts[i]) * this->dt;
 	}
-	delete[] operatingPts;
+	sum += this->out(pts[static_cast<int>(size)]) * this->dt/2;
+
+	delete[] pts;
 	return sum;
 }
 

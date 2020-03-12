@@ -1,8 +1,8 @@
 #pragma once
 #include"main.h"
 
-extern struct p2D;
-extern vector2D;
+struct p2D;
+vector2D;
 
 class Interpolation
 {
@@ -15,7 +15,8 @@ public:
 	p2D* pts;
 	// Normal Init
 	Interpolation();
-	Interpolation(vector2D pts); // Init function from given points, handler of function 
+	// Init function from given points, handler of function 
+	Interpolation(vector2D pts); 
 	void getInfo();
 	~Interpolation();
 	

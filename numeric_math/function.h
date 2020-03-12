@@ -8,10 +8,14 @@ private:
 	double (*funcPtr)(double);
 
 public:
+	// Define new function with definition
 	function(double dt, double (*funcPtr)(double));
 	~function();
 	// Use functionPointer to calculate output -> double foo(); Ex: func.out(x, foo);
 	double out(double in); //
-	double integralInterpolarQuadratur(double lowerBnd, double upperBnd);
+
+	// Integration
+	double IntegrateSumTrapez(double lowerBnd, double upperBnd);
+
 };
 

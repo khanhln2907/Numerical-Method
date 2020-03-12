@@ -26,7 +26,6 @@ Interpolation::~Interpolation()
 	delete[] this->pts;
 }
 
-
 // Numeric
 // Lagrange
 double Interpolation::lagrange(double x) {
