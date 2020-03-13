@@ -6,6 +6,8 @@
 
 int main()
 {
-	sf::
-    std::cout << "Hello World!\n";
+	sf::RenderWindow window(sf::VideoMode(800, 600), "SFML window");
+	window.clear(sf::Color::Cyan);
+	window.display();
+	getchar();
 }
