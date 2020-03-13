@@ -37,12 +37,18 @@ int main() {
 		cout << "Modified Euler: " << myFunction.DerivativeModifiedEuler(x) << endl;
 
 		cout << "Numerical Euler E of df at t: ";
-		printf("%20.18f", ode.Euler_Explicit(x)); cout << endl;
+		printf("%20.30f", ode.Euler_Explicit(x)); cout << endl;
+
 		cout << "Numerical Euler I of df at t: "; 
-		printf("%20.18f", ode.Euler_Implicit(x)); cout << endl;
-		cout << "Numerical RK2 I of df at t: ";
-		printf("%20.18f", ode.RK2(x)); cout << endl;
-		printf("%20.18f", f(x)); cout << endl;
+		printf("%20.30f", ode.Euler_Implicit(x)); cout << endl;
+
+		cout << "Numerical RK2 of df at t: ";
+		printf("%20.30f", ode.RK2(x)); cout << endl;
+
+		cout << "Numerical RK4 of df at t: ";
+		printf("%20.30f", ode.RK4(x)); cout << endl;
+
+		printf("%20.30f", f(x)); cout << endl;
 		
 		////Extrapolation
 		//cout << "Lagrange extrapolation: " << function.lagrange(x) << endl;
