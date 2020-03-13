@@ -7,12 +7,19 @@ private:
 	double dt;
 	double (*funcPtr)(double);
 
+	double getX; // Use for Fix Point iteration
+
 public:
 	// Define new function with definition
 	function(double dt, double (*funcPtr)(double));
 	~function();
 	// Use functionPointer to calculate output -> double foo(); Ex: func.out(x, foo);
 	double out(double in); //
+
+	// Solve Function f(x) = 0 -> x
+	double getSolution();
+
+
 
 	// Integration
 	/* 

@@ -4,6 +4,7 @@ function::function(double dt, double (*funcPtr)(double))
 {
 	this->dt = dt;
 	this->funcPtr = funcPtr;
+	//this->getX = 0;
 }
 
 function::~function()
@@ -15,6 +16,13 @@ double function::out(double in)
 {
 	return this->funcPtr(in);
 }
+
+//double function::getSolution()
+//{
+//	this->funcPtr;
+//	this->dt;
+//	return 0;
+//}
 
 double function::IntegrateSumTrapez(double lowerBnd, double upperBnd)
 {

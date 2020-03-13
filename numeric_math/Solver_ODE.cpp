@@ -40,7 +40,7 @@ double Solver_ODE::Euler_Implicit(double t)
 	double range = (t - this->t0) / this->dt;
 	double xt = this->x0;
 	double currentX = x0;
-	for (int i = 1; i <= range; i++) {
+	for (int i = 0; i < range; i++) {
 		double euler_predict = currentX + this->dt * this->calculate(this->t0 + i * this->dt, currentX);
 		double euler_correct = currentX + this->dt * this->calculate(this->t0 + i * this->dt + this->dt, euler_predict);
 		xt = euler_correct;
