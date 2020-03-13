@@ -20,7 +20,7 @@ public:
 
 	//Euler Method
 	double Euler_Explicit(double t);
-	double Euler_Implicit(double t);
+	double Euler_Implicit(double t); // Some problem with this now, not recommended
 
 	//Runga Kutta
 	double RK2(double t);
