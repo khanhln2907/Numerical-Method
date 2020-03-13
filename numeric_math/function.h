@@ -15,8 +15,22 @@ public:
 	double out(double in); //
 
 	// Integration
+	/* 
+	Input: Lower bound and upper bound
+	Output: Integration, higher precision as interpolator integration
+	*/
 	double IntegrateSumTrapez(double lowerBnd, double upperBnd);
 	double IntegrateSimpson(double lowerBnd, double upperBnd);
+
+	// Derivative
+	/*
+	Known: Function y = f(t), t0 and yo. Condition of f: Lipshitz conitnuos
+	Input: t
+	Output: df = f(t,y(t)), where y(t0) = y0
+	*/
+	double DerivativeExplicitEuler(double t); // Consistence order = 1;
+	double DerivativeImplicitEuler(double t); // 
+	double DerivativeModifiedEuler(double t); // Order = 2;
 
 };
 

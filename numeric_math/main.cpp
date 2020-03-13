@@ -18,24 +18,25 @@ int main() {
 	double a = 0, b = 25;
 	int flag = 1;
 
-	cout << myFunction.out(5) << endl;
 	while (1) {
 		cout << endl;
 		cout << " Please input x: " << endl;
-		getchar();
 		cin >> x;	
 
 		// Integration
 		cout << "Integration: " << Integrator.InterpolarQuadratur(function, a, x) << endl;
 		cout << "Simpson Built In: " << myFunction.IntegrateSimpson(a, x) << endl;
 		cout << "Trapez Built In: " << myFunction.IntegrateSumTrapez(a, x) << endl;
-
-
+		cout << "Derivative E Euler: " << myFunction.DerivativeExplicitEuler(x) << endl;
+		cout << "Derivative I Euler: " << myFunction.DerivativeImplicitEuler(x) << endl;
+		cout << "Modified Euler: " << myFunction.DerivativeModifiedEuler(x) << endl;
+		
 		////Extrapolation
 		//cout << "Lagrange extrapolation: " << function.lagrange(x) << endl;
 		//cout << "Newton extrapolation: " << function.newton(x) << endl;
 
 		//function.getInfo();
+		getchar();
 	}
 }
 

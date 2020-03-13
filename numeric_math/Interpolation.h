@@ -21,13 +21,13 @@ public:
 	~Interpolation();
 	
 	//Numerik
-	// Lagrange Interpolation =======================================================================  
+	// Lagrange Interpolation  ==  Linear Spline ======================================================  
 	// y = function.lagrange(x)
 	double lagrange(double x);
 	// y = Interp.lagrange(x, xPoints, yPoints);
 	template<typename T> T lagrangeFromPoints(T x, const std::vector<T> vx, const std::vector<T> vy);
 	
-	// Newton Interpolation ========================================================================
+	// Newton Interpolation ===========================================================================
 	// T y = Interp.newton(vector<T> vx, vector<T> vy, Tx) 
 	// pn(x) = c0 + c1*(x-x0) + c2*(x-x0)(x-x1) + ... + cn*(x-x0)...(x-xn-1)
 	double newton(double x);

@@ -50,3 +50,18 @@ double function::IntegrateSimpson(double lowerBnd, double upperBnd)
 	return sum*h/3;
 }
 
+double function::DerivativeExplicitEuler(double t)
+{
+	return (this->out(t + this->dt) - this->out(t)) / this->dt;
+}
+
+double function::DerivativeImplicitEuler(double t)
+{
+	return (this->out(t) - this->out(t - this ->dt)) / this->dt;
+}
+
+double function::DerivativeModifiedEuler(double t)
+{
+	return ((this->out(t + this->dt/2) - this->out(t - this->dt/2))/this->dt);
+}
+
