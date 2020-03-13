@@ -76,6 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\khanh\Desktop\C++\numeric_math\numeric_math\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -87,6 +88,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\khanh\Desktop\C++\numeric_math\numeric_math\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -123,22 +125,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Derivative.cpp" />
-    <ClCompile Include="function.cpp" />
-    <ClCompile Include="Integration.cpp" />
-    <ClCompile Include="Interpolation.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Solver_Equation.cpp" />
-    <ClCompile Include="Solver_ODE.cpp" />
+    <ClCompile Include="src\Derivative.cpp" />
+    <ClCompile Include="src\function.cpp" />
+    <ClCompile Include="src\Integration.cpp" />
+    <ClCompile Include="src\Interpolation.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Solver_Equation.cpp" />
+    <ClCompile Include="src\Solver_ODE.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Derivative.h" />
-    <ClInclude Include="function.h" />
-    <ClInclude Include="Integration.h" />
-    <ClInclude Include="Interpolation.h" />
-    <ClInclude Include="main.h" />
-    <ClInclude Include="Solver_Equation.h" />
-    <ClInclude Include="Solver_ODE.h" />
+    <ClInclude Include="include\Derivative.h" />
+    <ClInclude Include="include\function.h" />
+    <ClInclude Include="include\Integration.h" />
+    <ClInclude Include="include\Interpolation.h" />
+    <ClInclude Include="include\main.h" />
+    <ClInclude Include="include\Solver_Equation.h" />
+    <ClInclude Include="include\Solver_ODE.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -15,48 +15,48 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Interpolation.cpp">
+    <ClCompile Include="src\Derivative.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\function.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Integration.cpp">
+    <ClCompile Include="src\Integration.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Derivative.cpp">
+    <ClCompile Include="src\Interpolation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="function.cpp">
+    <ClCompile Include="src\Solver_Equation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Solver_ODE.cpp">
+    <ClCompile Include="src\Solver_ODE.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Solver_Equation.cpp">
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Interpolation.h">
+    <ClInclude Include="include\Derivative.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="main.h">
+    <ClInclude Include="include\function.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Integration.h">
+    <ClInclude Include="include\Integration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Derivative.h">
+    <ClInclude Include="include\Interpolation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="function.h">
+    <ClInclude Include="include\Solver_Equation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Solver_ODE.h">
+    <ClInclude Include="include\Solver_ODE.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Solver_Equation.h">
+    <ClInclude Include="include\main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
