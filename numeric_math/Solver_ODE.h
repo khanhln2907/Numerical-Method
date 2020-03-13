@@ -17,8 +17,14 @@ public:
 
 	void set_dt(double dt);
 	double calculate(double t, double x);
+
+	//Euler Method
 	double Euler_Explicit(double t);
 	double Euler_Implicit(double t);
+
+	//Runga Kutta
+	double RK2(double t);
+	double RK4(double t);
 
 };
 

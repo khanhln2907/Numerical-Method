@@ -48,3 +48,23 @@ double Solver_ODE::Euler_Implicit(double t)
 	}
 	return xt;
 }
+
+// x+ = x + (F1 + F2)/2, where 
+// F1 = dt * f(t,x)
+// F2 = dt * f(t+,x+F1)
+double Solver_ODE::RK2(double t) 
+{
+	assert(t >= this->t0);
+	double xt = this->x0;
+	double range = (t - this->t0) / this->dt;
+	double currentX = x0;
+	double currentT = this->t0;
+	for (int i = 1; i <= range; i++) {
+		double F1 = this->dt * this->calculate(currentT, currentX);
+		double F2 = this->dt * this->calculate(currentT + this->dt, currentX + F1);
+		xt += (F1 + F2) / 2;
+		currentT += this->dt;
+		currentX = xt;
+	}
+	return xt;
+}

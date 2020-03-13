@@ -16,7 +16,7 @@ int main() {
 	// Interpolation Method
 	Interpolation function(pntVector);
 	Integration Integrator;
-	Solver_ODE ode(0.0, 3, 0.001, df);
+	Solver_ODE ode(0.0, 3, 0.0001, df);
 	std::vector<double> pntX = { -2,-1,0,1,2 };
 	std::vector<double> pntY = { 4,1,0,1,4 };
 	double a = 0, b = 25;
@@ -36,9 +36,13 @@ int main() {
 		cout << "Derivative I Euler: " << myFunction.DerivativeImplicitEuler(x) << endl;
 		cout << "Modified Euler: " << myFunction.DerivativeModifiedEuler(x) << endl;
 
-		cout << "Numerical Euler E of df at t: " << ode.Euler_Explicit(x) << endl;
-		cout << "Numerical Euler I of df at t: " << ode.Euler_Implicit(x) << endl;
-		cout << "Solution of df at t: " << f(x) << endl;
+		cout << "Numerical Euler E of df at t: ";
+		printf("%20.18f", ode.Euler_Explicit(x)); cout << endl;
+		cout << "Numerical Euler I of df at t: "; 
+		printf("%20.18f", ode.Euler_Implicit(x)); cout << endl;
+		cout << "Numerical RK2 I of df at t: ";
+		printf("%20.18f", ode.RK2(x)); cout << endl;
+		printf("%20.18f", f(x)); cout << endl;
 		
 		////Extrapolation
 		//cout << "Lagrange extrapolation: " << function.lagrange(x) << endl;
