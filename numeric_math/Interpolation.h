@@ -7,12 +7,10 @@ vector2D;
 class Interpolation
 {
 private:
-	
+	p2D* pts;
 	double size;
 
-
 public:
-	p2D* pts;
 	// Normal Init
 	Interpolation();
 	// Init function from given points, handler of function 

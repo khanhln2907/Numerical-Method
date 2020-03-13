@@ -30,7 +30,7 @@ double Integration::InterpolarQuadratur(Interpolation& function, double lowerBnd
 }
 
 // Trapezoidal
-double Integration::Trapezoidal(fPtr function, double lowerBnd, double upperBnd) {
+double Integration::Trapezoidal(fPtr1v function, double lowerBnd, double upperBnd) {
 	double size = (upperBnd - lowerBnd) / this->dt;
 	double* pts = new double[size + 1];
 	pts[0] = lowerBnd;
@@ -46,7 +46,7 @@ double Integration::Trapezoidal(fPtr function, double lowerBnd, double upperBnd)
 }
 
 // Simpson Rules
-double Integration::Simpson(fPtr function, double lowerBnd, double upperBnd)
+double Integration::Simpson(fPtr1v function, double lowerBnd, double upperBnd)
 {
 	double h = this->dt / 2;
 	double size = (upperBnd - lowerBnd) / h;

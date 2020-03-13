@@ -2,8 +2,8 @@
 #include"main.h"
 #include"Interpolation.h"
 
-extern class Interpolation;
-typedef double (*fPtr)(double); // define fptr as function pointer
+class Interpolation;
+fPtr1v;
 
 class Integration
 {
@@ -27,9 +27,9 @@ public:
 	template <typename T> T InterpolarQuadratur(Interpolation function, T lowerBnd, T upperBnd);
 	
 	// Trapezoidal =========================================================================
-	double Trapezoidal(fPtr function, double lowerBnd, double upperBnd); 
+	double Trapezoidal(fPtr1v function, double lowerBnd, double upperBnd);
 
 	// Simpson =========================================================================
-	double Simpson(fPtr function, double lowerBnd, double upperBnd);
+	double Simpson(fPtr1v function, double lowerBnd, double upperBnd);
 };
 

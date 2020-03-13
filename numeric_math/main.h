@@ -14,3 +14,5 @@ struct p2D {
 };
 
 typedef std::vector<p2D> vector2D;
+typedef double (*fPtr1v)(double); // define fptr as function pointer
+typedef double(*fPtr2v)(double, double); // Pointer to derivative function f(t,x)
