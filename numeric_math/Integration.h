@@ -3,15 +3,17 @@
 #include"Interpolation.h"
 
 extern class Interpolation;
+typedef double (*fPtr)(double); // define fptr as function pointer
 
 class Integration
 {
 private:
-	double dx = 0.001;
+	double dt = 0.001;
 
 public:
 	Integration();
 	~Integration();
+	void setDt(double dt);
 
 	// Numerik
 	// Interpolar Quadratur =======================================================================
@@ -24,8 +26,10 @@ public:
 	// template double Integration::InterpolarQuadratur(Interpolation, double, double);
 	template <typename T> T InterpolarQuadratur(Interpolation function, T lowerBnd, T upperBnd);
 	
-	// Trapez Quadratur =========================================================================
-	double SumTrapez(Interpolation function, double lowerBnd, double upperBnd); // Consider Pointer to function here
-	
+	// Trapezoidal =========================================================================
+	double Trapezoidal(fPtr function, double lowerBnd, double upperBnd); 
+
+	// Simpson =========================================================================
+	double Simpson(fPtr function, double lowerBnd, double upperBnd);
 };
 
