@@ -24,7 +24,8 @@ int main() {
 
 	while (1) {
 		cout << endl;
-		cout << " Please input x: " << endl;
+		cout << "============================" << endl;
+		cout << "Please input x: " << endl;
 		cin >> x;	
 
 		// Integration
@@ -34,7 +35,9 @@ int main() {
 		cout << "Derivative E Euler: " << myFunction.DerivativeExplicitEuler(x) << endl;
 		cout << "Derivative I Euler: " << myFunction.DerivativeImplicitEuler(x) << endl;
 		cout << "Modified Euler: " << myFunction.DerivativeModifiedEuler(x) << endl;
-		cout << "Numerical Solution of df at t: " << ode.Euler_Explicit(x) << endl;
+
+		cout << "Numerical Euler E of df at t: " << ode.Euler_Explicit(x) << endl;
+		cout << "Numerical Euler I of df at t: " << ode.Euler_Implicit(x) << endl;
 		cout << "Solution of df at t: " << f(x) << endl;
 		
 		////Extrapolation

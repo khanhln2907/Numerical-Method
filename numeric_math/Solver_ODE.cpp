@@ -13,6 +13,11 @@ Solver_ODE::~Solver_ODE()
 	;
 }
 
+void Solver_ODE::set_dt(double dt)
+{
+	this->dt = dt;
+}
+
 double Solver_ODE::calculate(double t, double x)
 {
 	return this->pFcn(t,x);
@@ -25,6 +30,21 @@ double Solver_ODE::Euler_Explicit(double t)
 	double xt = this->x0;
 	for (int i = 1; i <= range; i++) {
 		xt += this->dt * this->calculate(t0 + i * this->dt, xt);
+	}
+	return xt;
+}
+
+double Solver_ODE::Euler_Implicit(double t)
+{
+	assert(t >= this->t0);
+	double range = (t - this->t0) / this->dt;
+	double xt = this->x0;
+	double currentX = x0;
+	for (int i = 1; i <= range; i++) {
+		double euler_predict = currentX + this->dt * this->calculate(this->t0 + i * this->dt, currentX);
+		double euler_correct = currentX + this->dt * this->calculate(this->t0 + i * this->dt + 1, euler_predict);
+		xt = euler_predict;
+		currentX = xt;
 	}
 	return xt;
 }

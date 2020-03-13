@@ -15,8 +15,10 @@ public:
 	Solver_ODE(double t0, double x0, double dt, fPtr2v function);
 	~Solver_ODE();
 
+	void set_dt(double dt);
 	double calculate(double t, double x);
 	double Euler_Explicit(double t);
+	double Euler_Implicit(double t);
 
 };
 
